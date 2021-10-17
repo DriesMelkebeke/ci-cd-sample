@@ -5,11 +5,11 @@ mkdir tempdir
 mkdir tempdir/templates
 mkdir tempdir/static
 
-cp sample_app.py tempdir/.
-cp -r templates/* tempdir/templates/.
-cp -r static/* tempdir/static/.
+cp sample_app.py tempdir1/.
+cp -r templates/* tempdir1/templates/.
+cp -r static/* tempdir1/static/.
 
-cat > tempdir/Dockerfile << _EOF_
+cat > tempdir1/Dockerfile << _EOF_
 FROM python
 RUN pip install flask
 COPY  ./static /home/myapp/static/
